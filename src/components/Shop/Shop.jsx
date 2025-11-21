@@ -73,12 +73,12 @@ const Shop = () => {
                 }
             </div>
             <div className="cart-container">
-                <Cart
+                <Cart 
                     cart={cart}
                     handleClearCart={handleClearCart}
                 >
                     <Link className='proceed-link' to="/orders">
-                        <button className='btn-proceed'>Review Order</button>
+                        <button className='btn-proceed' >Review Order</button>
                     </Link>
                 </Cart>
             </div>
