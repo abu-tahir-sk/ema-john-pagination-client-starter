@@ -31,7 +31,7 @@ const Shop = () => {
     )
       .then((res) => res.json())
       .then((data) => setProducts(data));
-  }, []);
+  }, [currentPage, itemsPerPage]);
 
   useEffect(() => {
     const storedCart = getShoppingCart();
@@ -118,7 +118,7 @@ const Shop = () => {
         <button onClick={handlePrevPage}>Prev</button>
         {pages.map((page) => (
           <button
-            className={currentPage === page && "selected"}
+            className={currentPage === page ? "selected" : ""}
             key={page}
             onClick={() => setCurrentPage(page)}
           >
@@ -134,7 +134,7 @@ const Shop = () => {
         >
           <option value="10">10</option>
           <option value="5">5</option>
-          <option value="20">20</option>
+          <option value="20">30</option>
         </select>
       </div>
     </div>
